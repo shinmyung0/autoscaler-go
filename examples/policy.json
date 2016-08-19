@@ -1,0 +1,30 @@
+[
+
+    {
+        "Service" : "frontend-fib",
+        "EvaluationInterval" : 5,
+        "ObservationInterval" : 30,
+        "MinInstances" : 5,
+        "MaxInstances" : 10,
+        "DesiredState" : {
+
+            "Springboot" : {
+                "Min" : 200,
+                "Endpoints" : [
+                    "/fib"
+                ]
+            },
+            "Cadvisor" : {
+                "AvgCpu" : {
+                    "Min" : 10,
+                    "Max" : 80
+                },
+                "AvgMemory" : {
+                    "Min" : 10,
+                    "Max" : 80
+                }
+            }
+        }
+    }
+
+]
